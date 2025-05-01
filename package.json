@@ -59,10 +59,10 @@
         "@sveltejs/kit": "^2.4.0"
     },
     "devDependencies": {
+        "@std/path": "npm:@jsr/std__path@^1.0.9",
         "prettier": "^3.5.3"
     },
     "dependencies": {
-        "@std/path": "npm:@jsr/std__path@^1.0.9",
         "@rollup/plugin-node-resolve": "^16.0.1",
         "@rollup/plugin-swc": "^0.4.0",
         "@swc/core": "^1.11.24",
