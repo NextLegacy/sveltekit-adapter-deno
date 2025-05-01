@@ -39,7 +39,10 @@
         "index.d.ts",
         "index.js",
         "LICENSE",
-        "README.md"
+        "README.md",
+        "package.json",
+        "deno.json",
+        ".npmrc"
     ],
     "type": "module",
     "scripts": {
@@ -53,5 +56,13 @@
     },
     "peerDependencies": {
         "@sveltejs/kit": "^2.4.0"
+    },
+    "devDependencies": {
+        "@rollup/plugin-node-resolve": "^16.0.1",
+        "@rollup/plugin-swc": "^0.4.0",
+        "@swc/core": "^1.11.24",
+        "prettier": "^3.5.3",
+        "rollup": "4.40.1",
+        "@std/path": "npm:@jsr/std__path@^1.0.9"
     }
 }

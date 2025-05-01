@@ -1,5 +1,12 @@
 # Changelog for [`@nextlegacy/sveltekit-adapter-deno`](https://github.com/nextlegacy/sveltekit-adapter-deno)
 
+## 1.0.2
+
+### Fix
+
+- Added `.npmrc` to the build output.
+- Fixed `emit` usage.
+
 ## 1.0.1
 
 ### Fix

@@ -5,7 +5,6 @@
     "tasks": {
         "dev": "rm -rf build && deno run -A npm:rollup -cw",
         "build": "rm -rf build && deno run -A npm:rollup -c",
-        "test": "vitest run",
         "check": "deno check *.ts",
         "lint": "deno fmt --check",
         "format": "deno fmt"

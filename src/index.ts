@@ -1,6 +1,6 @@
 import { env } from "./env.ts";
 
-import { emit } from "node:process";
+import process from "node:process";
 
 import { handler } from "./handler.ts";
 
@@ -82,7 +82,7 @@ function gracefulShutdown(reason: string) {
     }, shutdownTimeout * 1000);
 
     // @ts-expect-error No overload matches this call.
-    emit("sveltekit:shutdown", reason);
+    process.emit("sveltekit:shutdown", reason);
 
     controller.abort();
 
