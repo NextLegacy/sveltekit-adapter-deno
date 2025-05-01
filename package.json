@@ -31,7 +31,8 @@
             "import": "./index.js"
         },
         "./package.json": "./package.json",
-        "./deno.json": "./deno.json"
+        "./deno.json": "./deno.json",
+        "./.npmrc": "./.npmrc"
     },
     "types": "./index.d.ts",
     "files": [
