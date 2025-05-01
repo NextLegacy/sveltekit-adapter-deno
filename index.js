@@ -1,14 +1,11 @@
-import type { Adapter } from "@sveltejs/kit";
-
 import { rollup } from "rollup";
 
 import { fileURLToPath } from "node:url";
 import { nodeResolve } from "@rollup/plugin-node-resolve";
-import { AdapterOptions } from "./index.d.ts";
 
 const files = fileURLToPath(new URL("./build", import.meta.url).href);
 
-export default function (opts: AdapterOptions = {}): Adapter {
+export default function (opts = {}) {
     const { out = "build", precompress = true, envPrefix = "HELLO_WORLD" } = opts;
 
     return {

@@ -1,6 +1,6 @@
 {
     "name": "@nextlegacy/sveltekit-adapter-deno",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Adapter for SvelteKit apps that generates a standalone Deno server",
     "tasks": {
         "dev": "rm -rf build && deno run -A npm:rollup -cw",
@@ -19,5 +19,14 @@
         "prettier": "npm:prettier@^3.5.3",
         "rollup": "npm:rollup@4.40.1"
     },
-    "nodeModulesDir": "none"
+    "nodeModulesDir": "none",
+    "exports": {
+        "./index.js": "./index.js",
+        "./package.json": "./package.json",
+        "./deno.json": "./deno.json",
+        "./index.d.ts": "./index.d.ts",
+        "./build": "./build",
+        "./LICENSE": "./LICENSE",
+        "./README.md": "./README.md"
+    }
 }

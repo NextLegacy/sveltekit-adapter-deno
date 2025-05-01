@@ -1,7 +1,6 @@
 # SvelteKit Adapter for Deno 🦕
 
 [![npm package](https://img.shields.io/npm/v/@nextlegacy/sveltekit-adapter-deno)](https://www.npmjs.com/package/@nextlegacy/sveltekit-adapter-deno)
-[![License](https://img.shields.io/npm/l/@nextlegacy/sveltekit-adapter-deno)](LICENSE)
 [![Version](https://img.shields.io/github/v/release/nextlegacy/sveltekit-adapter-deno?include_prereleases)](https://github.com/nextlegacy/sveltekit-adapter-deno/releases)
 
 > Adapter for SvelteKit apps that generates a standalone Deno server. 🦕

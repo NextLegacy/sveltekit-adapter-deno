@@ -15,7 +15,7 @@ const rollup: MergedRollupOptions[] = [
             }
         ],
         plugins: [swc()],
-        external: ["@sveltejs/kit", "@sveltejs/kit/node", "MANIFEST", "@std/path", "SERVER"]
+        external: ["@sveltejs/kit", "@sveltejs/kit/node", "MANIFEST", "@std/path", "SERVER", "node:process"]
     },
     {
         input: "src/env.ts",
