@@ -18,7 +18,7 @@
         "prettier": "npm:prettier@^3.5.3",
         "rollup": "npm:rollup@4.40.1"
     },
-    "nodeModulesDir": "none",
+    "nodeModulesDir": "auto",
     "exports": {
         "./index.js": "./index.js",
         "./package.json": "./package.json",
