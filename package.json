@@ -1,6 +1,6 @@
 {
     "name": "@nextlegacy/sveltekit-adapter-deno",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "description": "Adapter for SvelteKit apps that generates a standalone Deno server",
     "keywords": [
         "adapter",
