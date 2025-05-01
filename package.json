@@ -1,0 +1,57 @@
+{
+    "name": "@nextlegacy/sveltekit-adapter-deno",
+    "version": "1.0.0",
+    "description": "Adapter for SvelteKit apps that generates a standalone Deno server",
+    "keywords": [
+        "adapter",
+        "deploy",
+        "hosting",
+        "svelte",
+        "sveltekit",
+        "deno"
+    ],
+    "publisher": "nextlegacy",
+    "homepage": "https://nextlegacy.de",
+    "license": "MIT",
+    "sponsor": {
+        "url": "https://github.com/sponsors/nextlegacy"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/nextlegacy/sveltekit-adapter-deno.git"
+    },
+    "bugs": {
+        "url": "https://github.com/nextlegacy/sveltekit-adapter-deno/issues",
+        "email": "hey@nextlegacy.de"
+    },
+    "author": "NextLegacy <hey@nextlegacy.de>",
+    "exports": {
+        ".": {
+            "types": "./index.d.ts",
+            "import": "./index.js"
+        },
+        "./package.json": "./package.json",
+        "./deno.json": "./deno.json"
+    },
+    "types": "./index.d.ts",
+    "files": [
+        "build",
+        "index.d.ts",
+        "index.js",
+        "LICENSE",
+        "README.md"
+    ],
+    "type": "module",
+    "scripts": {
+        "build": "deno task build",
+        "dev": "deno task dev",
+        "test": "deno task test",
+        "check": "deno task check",
+        "lint": "deno task lint",
+        "format": "deno task format",
+        "prepublishOnly": "deno task build"
+    },
+    "peerDependencies": {
+        "@sveltejs/kit": "^2.4.0"
+    }
+}
