@@ -12,11 +12,14 @@
     "imports": {
         "@rollup/plugin-node-resolve": "npm:@rollup/plugin-node-resolve@^16.0.1",
         "@rollup/plugin-swc": "npm:@rollup/plugin-swc@^0.4.0",
+        "@rollup/plugin-commonjs": "npm:@rollup/plugin-commonjs@^28.0.3",
+        "@rollup/plugin-json": "npm:@rollup/plugin-json@^6.1.0",
+        "@std/dotenv": "jsr:@std/dotenv@^0.225.3",
         "@std/path": "jsr:@std/path@^1.0.9",
-        "@sveltejs/kit": "npm:@sveltejs/kit@^2.20.8",
+        "@sveltejs/kit": "npm:@sveltejs/kit@^2.21.1",
         "@swc/core": "npm:@swc/core@^1.11.24",
         "prettier": "npm:prettier@^3.5.3",
-        "rollup": "npm:rollup@4.40.1"
+        "rollup": "npm:rollup@4.41.0"
     },
     "nodeModulesDir": "auto",
     "exports": {

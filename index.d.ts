@@ -1,4 +1,4 @@
-import type { Adapter } from '@sveltejs/kit';
+import type { Adapter } from "@sveltejs/kit";
 
 export type AdapterOptions = {
     out?: string;
@@ -9,6 +9,5 @@ export type AdapterOptions = {
 declare global {
     const ENV_PREFIX: string;
 }
-
 
 export default function plugin(options?: AdapterOptions): Adapter;

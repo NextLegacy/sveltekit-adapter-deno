@@ -2,11 +2,13 @@ import { rollup } from "rollup";
 
 import { fileURLToPath } from "node:url";
 import { nodeResolve } from "@rollup/plugin-node-resolve";
+import commonjs from "@rollup/plugin-commonjs";
+import json from "@rollup/plugin-json";
 
 const files = fileURLToPath(new URL("./build", import.meta.url).href);
 
 export default function (opts = {}) {
-    const { out = "build", precompress = true, envPrefix = "HELLO_WORLD" } = opts;
+    const { out = "build", precompress = true, envPrefix = "" } = opts;
 
     return {
         name: "sveltekit-adapter-deno",
@@ -58,7 +60,9 @@ export default function (opts = {}) {
                     nodeResolve({
                         preferBuiltins: true,
                         exportConditions: ["node"]
-                    })
+                    }),
+                    commonjs({ strictRequires: true }),
+                    json()
                 ]
             });
 

@@ -1,3 +1,5 @@
+import "jsr:@std/dotenv/load";
+
 const expected = new Set([
     "SOCKET_PATH",
     "HOST",

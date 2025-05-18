@@ -1,4 +1,3 @@
-
 declare module "MANIFEST" {
     import { SSRManifest } from "@sveltejs/kit";
 
