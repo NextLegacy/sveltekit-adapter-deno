@@ -1,5 +1,11 @@
 # Changelog for [`@nextlegacy/sveltekit-adapter-deno`](https://github.com/nextlegacy/sveltekit-adapter-deno)
 
+## 1.0.10
+
+### Fix
+
+- Fixed `Deno.serve()` listening on a `unix:socket` path ([#1](https://github.com/NextLegacy/sveltekit-adapter-deno/pull/1)) - thanks [@yds](https://github.com/yds)!
+
 ## 1.0.2
 
 ### Fix
