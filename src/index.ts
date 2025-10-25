@@ -23,16 +23,19 @@ if (listenFds > 1) {
 
 const socketActivation = listenPid === Deno.pid && listenFds === 1;
 
-const controller = new AbortController();
-const { signal } = controller;
-
-const onListen = (localAddr: Deno.NetAddr) => {
-    console.log(`Server is listening on ${localAddr.hostname}:${localAddr.port}`);
-};
-
 let activeRequests = 0;
 let shutdownTimeoutId: number | undefined;
 let idleTimeoutId: number | undefined;
+
+const controller = new AbortController();
+const serveOptions = { signal: controller.signal };
+
+if (socketPath) {
+    serveOptions.path = socketPath;
+} else {
+    serveOptions.hostname = hostname;
+    serveOptions.port = port;
+}
 
 const serveHandler: Deno.ServeHandler<Deno.NetAddr> = async (request, info) => {
     activeRequests++;
@@ -95,4 +98,4 @@ if (Deno.build.os !== "windows") {
     Deno.addSignalListener("SIGTERM", () => gracefulShutdown("SIGTERM"));
 }
 
-export const server = Deno.serve({ signal, hostname, port, onListen }, serveHandler);
+export const server = Deno.serve(serveOptions, serveHandler);
