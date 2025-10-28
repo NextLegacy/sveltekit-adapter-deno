@@ -1,4 +1,10 @@
-# Changelog for [`@nextlegacy/sveltekit-adapter-deno`](https://github.com/nextlegacy/sveltekit-adapter-deno)
+# Changelog for [`@nextlegacy/sveltekit-adapter-deno`](https://github.com/nextlegacy/sveltekit-adapter-deno
+
+## 1.0.11
+
+### Fix
+
+- fixed "AddrInUse: Address already in use (os error 98)" when a leftover `socketPath` file already exists([#2](https://github.com/NextLegacy/sveltekit-adapter-deno/pull/2)) - thanks [@yds](https://github.com/yds)!
 
 ## 1.0.10
 
