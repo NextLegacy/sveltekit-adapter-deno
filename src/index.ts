@@ -31,6 +31,13 @@ const controller = new AbortController();
 const serveOptions = { signal: controller.signal };
 
 if (socketPath) {
+    try {
+        await Deno.remove(socketPath);
+    } catch (error) {
+        if (!(error instanceof Deno.errors.NotFound)) {
+            console.error("Problem removing stale socket:", error);
+        }
+    }
     serveOptions.path = socketPath;
 } else {
     serveOptions.hostname = hostname;
